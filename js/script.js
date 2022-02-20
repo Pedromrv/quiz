@@ -15,19 +15,24 @@ function getResults() {
   var amountCorrect = 0;
 
 // LOOP para hacer check de las preguntas
-  for(var i = 1; i <= 5; i++) {
+  for(var i = 1; i <= 6; i++) {
     var radiosName = document.getElementsByName('answer'+i);
 
 //LOOP para comprobar las respuestas dentro de cada radio
-    for(var j = 0; j < radiosName.length; j++) {
+       for (var j = 0; j < radiosName.length; j++) {
       var radiosValue = radiosName[j];
-      if(radiosValue.value == "correct" && radiosValue.checked) {
-        amountCorrect++;
-        radiosValue.style.color = "green";
+      if (radiosValue.checked) {
+        if (radiosValue.value == "correct") {
+          amountCorrect++;
+          radiosValue.nextSibling.style.color = "green";
+        } else {
+          radiosValue.nextSibling.style.color = "red";
+        }
+      } else {
+        radiosValue.nextSibling.style.color = "";  // valor por defecto
       }
     }
+    document.getElementById('results').innerHTML = "Respuestas correctas " + amountCorrect;
+    console.log(amountCorrect);
   }
-document.getElementById('results').innerHTML =
-"Respuestas correctas " + amountCorrect;
-
 }
