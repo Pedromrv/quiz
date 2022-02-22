@@ -28,9 +28,10 @@ body {
 }
 
 .grid #question {
+    text-align: center;
     font-family: "monospace";
     font-size: 50px;
-    color: black;
+    color: #DD6969;
 }
 
 .buttons {
@@ -39,7 +40,6 @@ body {
 
 #btn0, #btn1, #btn2, #btn3 {
     display: block;
-    background-color: #01BBFF;
     width: 100%;
     font-size: 60px;
     color: #fff;
@@ -47,10 +47,22 @@ body {
     margin: 10px 40px 10px 0px;
     padding: 10px 10px;
 }
+#btn0{
+    background-color: #5FD7A0;
+}
+#btn1{
+    background-color: #329AAA;
+} 
+#btn2{
+    background-color: #EF4E6F;
+} 
+#btn3{
+    background-color: #FEC43D;
+}
 
 #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
     cursor: pointer;
-    background-color: #01BBFF;
+    background-color: #413D3D;
 }
 
 #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
